@@ -25,12 +25,12 @@ const FormBlank = () => {
             <div className="col col2">
                 <form ref={form} onSubmit={handleSubmit}>
                     <label>From</label>
-                    <input type="text" placeholder="Your name" required name="user_name"/>
+                    <input type="text" placeholder="Full name" required name="user_name"/>
                     <br />
                     <label>Subject</label>
                     <input type="text" placeholder="Your Subject" required name="subject"/>
                     <br />
-                    <label>Who are you writing a wish for?</label>
+                    <label>Email</label>
                     <input type="email" placeholder="Email" required name="user_email"/>
                     <br />
                     <textarea placeholder="Your wish" type="text" required/>
