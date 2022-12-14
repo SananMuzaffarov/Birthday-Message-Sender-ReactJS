@@ -33,7 +33,7 @@ const FormBlank = () => {
                     <label>Email</label>
                     <input type="email" placeholder="Email" required name="user_email"/>
                     <br />
-                    <textarea placeholder="Your wish" type="text" required/>
+                    <textarea placeholder="Your wish" type="text" required name="user_wish"/>
                     <button type="submit">Create wish</button>
                 </form>
             </div>
