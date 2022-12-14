@@ -59,7 +59,7 @@
 }
 .col{
     flex-basis: 37%;
-    margin: 150px 0 0 0;
+    margin: 130px 0 0 0;
 }
 .col1{
     margin-left: 190px;
@@ -93,7 +93,7 @@ form input, form textarea{
     height: 40px;
     outline: none;
 }
-form input[type=text], form textarea{
+form input[type=text], form input[type=email], form textarea{
     font-size: 18px;
     font-weight: 300;
     color: #1f1f1f;
@@ -114,6 +114,4 @@ form button{
     color: #fff;
     border: 1px solid #0042ff;
     line-height: 1.4;
-    font-weight: 600;
-    font-family: sans-serif;
 }
