@@ -5,8 +5,8 @@ const HomePage = () => {
         <div className="home">
             <div className="homeText">
                 <h2>Make a Wish</h2>
-                <p>We would like to help you send a message <br/> to someone you care about</p>
-                <button type="button">Start the magic</button>
+                <p>I would like to help you send a message <br/> to Sanan, for his Birthday</p>
+                <button type="button"><a href="#formBlank" >Start the magic</a></button>
             </div>
         </div>
     );

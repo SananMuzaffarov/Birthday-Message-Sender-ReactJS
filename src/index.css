@@ -39,15 +39,20 @@
     border: 1px solid #fff;
     background-color: #fff;
     border-radius: 50px;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+.homeText button a{
+    text-decoration: none;
     color: #0042ff;
     font-size: 16px;
     font-weight: 500;
     font-family: Inter !important;
-    cursor: pointer;
-    transition: 0.6s ease;
 }
 .homeText button:hover, form button:hover{
     background-color: transparent;
+}
+.homeText button:hover a{
     color: #fff;
 }
 /* FORM PAGE */
