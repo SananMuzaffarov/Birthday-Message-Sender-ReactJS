@@ -3,19 +3,24 @@ import emailjs from '@emailjs/browser';
 
 const FormBlank = () => {
 
-    // UseRef Part
+   // UseRef Part
+
    const form = useRef()
 
    const handleSubmit = (e) => {
     e.preventDefault();
+
     emailjs.sendForm('service_v3ze9ha', 'template_fgmfgmo', form.current, 'Z3ARLYuvWTQ117QFq')
+
       .then((result) => {
           console.log(result.text);
       }, 
+
       (error) => {
           console.log(error.text);
       });   
       e.target.reset()
+
     };
 
     return(
@@ -28,13 +33,17 @@ const FormBlank = () => {
                     <label>From</label>
                     <input type="text" placeholder="Full name" required name="user_name"/>
                     <br />
+
                     <label>Subject</label>
                     <input type="text" placeholder="Your Subject" required name="subject"/>
                     <br />
+
                     <label>Email</label>
                     <input type="email" placeholder="Email" required name="user_email"/>
                     <br />
+
                     <textarea placeholder="Your wish" type="text" required name="user_wish"/>
+                    
                     <button type="submit">Send wish</button>
                 </form>
             </div>
