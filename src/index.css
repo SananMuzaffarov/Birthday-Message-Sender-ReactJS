@@ -61,10 +61,10 @@
     width: 100%;
     height: 100vh;
     background-color: #fff;
+    align-items: center;
 }
 .col{
     flex-basis: 37%;
-    margin: 130px 0 0 0;
 }
 .col1{
     margin-left: 190px;
@@ -120,3 +120,31 @@ form button{
     border: 1px solid #0042ff;
     line-height: 1.4;
 }
+/* RESPONSIVE  for iPhone X */
+@media only screen and (max-width: 767px){
+    .formBlank{
+        display: flex;
+        flex-direction: column;
+    }
+    .formBlank .col1{
+        display: flex;
+        margin: 40px;
+        text-align: center;
+    }
+    .formBlank .col1 h3{
+        font-size: 10px;
+    }
+    .formBlank .col2{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 50px 0;
+    }
+    form input, form textarea{
+        width: 170px;
+        height: 50px;
+    }
+    form button{
+        width: 170px;
+    }
+}
+
