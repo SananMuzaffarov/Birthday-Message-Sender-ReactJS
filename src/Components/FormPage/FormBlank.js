@@ -16,25 +16,14 @@ const FormBlank = () => {
           console.log(error.text);
       });   
       e.target.reset()
-
-      // setir 20-25 islemeye biler
-      if(values.firstName && values.lastName && values.Email){
-        setValid(true)
-    }
-        setSubmitted(true)
     };
 
-    // UseState Part (setir 28-50 arasi islemeye biler)
     const [values, setValues] = useState({
         user_name: '',
         subject: '',
         user_email: '',
         user_wish: ''
     });
-
-    const [submitted, setSubmitted] = useState(false);
-
-    const [valid, setValid] = useState(false);
 
     const handleChangeUserName = (e) => {
         setValues({...values, user_name: e.target.value })
@@ -56,7 +45,6 @@ const FormBlank = () => {
             </div>
             <div className="col col2">
                 <form ref={form} onSubmit={handleSubmit}>
-                    <h1>{submitted && valid ? <div>You're successfully send Message.</div> : null}</h1>
                     <label>From</label>
                     <input type="text" 
                     placeholder="Full name" 
@@ -65,7 +53,6 @@ const FormBlank = () => {
                     value={values.user_name} 
                     onChange={handleChangeUserName}
                     />
-                    <p id="error">{submitted && !values.user_name ? <span>Please Enter Your Name</span> : null}</p>
                     <br />
 
                     <label>Subject</label>
@@ -76,7 +63,6 @@ const FormBlank = () => {
                     value={values.subject}
                     onChange={handleChangeSubject}
                     />
-                    <p id="error">{submitted && !values.subject ? <span>Please Enter Subject</span> : null}</p>
                     <br />
 
                     <label>Email</label>
@@ -87,7 +73,6 @@ const FormBlank = () => {
                     value={values.user_email}
                     onChange={handleChangeUserMail}
                     />
-                    <p id="error">{submitted && !values.user_email ? <span>Please Enter Mail</span> : null}</p>
                     <br />
 
                     <textarea 
@@ -97,7 +82,6 @@ const FormBlank = () => {
                     name="user_wish" 
                     value={values.user_wish} 
                     onChange={handleChangeUserWish}/>
-                    <p id="error">{submitted && !values.user_wish ? <span>Please Enter Wish</span> : null}</p>
 
                     <button type="submit">Send wish</button>
                 </form>
